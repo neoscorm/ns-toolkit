@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="no-referrer" />
+    <title>neoScorm toolkit: SCORM viewer, player and checker</title>
+    <meta
+      name="description"
+      content="Free SCORM toolkit that runs in your browser. Open a folder of SCORM packages, see the version, authoring tool, size and problems of every course, and play any of them without an LMS. Nothing is uploaded."
+    />
+    <link rel="canonical" href="https://neoscorm.com/toolkit/" />
+    <meta property="og:site_name" content="neoScorm" />
+    <meta property="og:title" content="neoScorm toolkit: SCORM viewer, player and checker" />
+    <meta
+      property="og:description"
+      content="Open a folder of SCORM packages in your browser: find, check and play every course without an LMS. Nothing is uploaded."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neoscorm.com/toolkit/" />
+    <meta property="og:image" content="https://neoscorm.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#view">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="https://neoscorm.com/">neoScorm</a>
+      <span class="product">toolkit</span>
+      <nav class="site-nav" aria-label="Links">
+        <a id="github-link" href="#" target="_blank" rel="noopener" hidden>Source code</a>
+        <a href="https://neoscorm.com/">E-learning studio</a>
+      </nav>
+    </header>
+
+    <main id="view" class="view"></main>
+
+    <footer class="site-footer">
+      <p>Everything you open here stays on your computer. The toolkit keeps its results only in this browser.</p>
+      <p>Made by <a href="https://neoscorm.com/">neoScorm</a>, e-learning production studio.</p>
+    </footer>
+
+    <!-- Player screen: the course in the sandbox + what the course reports to the LMS (library/player/view.ts) -->
+    <div id="player-root" hidden></div>
+
+    <div id="drop-overlay" class="drop-overlay" hidden>
+      <p>Drop a folder to scan it</p>
+    </div>
+    <p id="error-box" class="error-box" role="alert" hidden></p>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

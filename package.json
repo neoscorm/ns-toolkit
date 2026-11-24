@@ -1,0 +1,30 @@
+{
+  "name": "neoscorm-toolkit",
+  "version": "0.3.0",
+  "description": "neoScorm toolkit: browse, check and play a folder of SCORM packages in the browser. Nothing is uploaded.",
+  "author": "Kostyantyn Sorokin",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.toolkit.config.ts",
+    "dev:sandbox": "vite --config vite.sandbox.config.ts",
+    "build": "tsc --noEmit && vite build --config vite.toolkit.config.ts && vite build --config vite.sandbox.config.ts",
+    "preview": "vite preview --config vite.toolkit.config.ts",
+    "preview:sandbox": "vite preview --config vite.sandbox.config.ts",
+    "typecheck": "tsc --noEmit",
+    "deploy:sandbox": "wrangler deploy --config wrangler.sandbox.toml"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
+    "@fontsource-variable/inter": "5.3.0",
+    "@zip.js/zip.js": "2.24.0",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "wrangler": "^4.147.0"
+  }
+}

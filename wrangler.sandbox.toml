@@ -1,0 +1,11 @@
+# Publishing the sandbox on Cloudflare Workers (static files from dist-sandbox/)
+# A separate Worker on a separate address: course code must not have access to toolkit data.
+# Run: npm run build, then npm run deploy:sandbox
+name = "neoscorm-sandbox"
+compatibility_date = "2026-11-19"
+
+# Binding the address sandbox.neoscorm.com (the neoscorm.com domain must be in the same Cloudflare account)
+routes = [{ pattern = "sandbox.neoscorm.com", custom_domain = true }]
+
+[assets]
+directory = "./dist-sandbox"

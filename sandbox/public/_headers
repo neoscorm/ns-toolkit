@@ -1,0 +1,10 @@
+# Response headers of the sandbox (Cloudflare reads this file from the build folder)
+
+# The sandbox may be embedded only in the toolkit; keep it out of search engines
+/*
+  Content-Security-Policy: frame-ancestors https://neoscorm.com https://www.neoscorm.com
+  X-Robots-Tag: noindex
+
+# Service Worker updates must reach users immediately
+/sw.js
+  Cache-Control: no-cache
